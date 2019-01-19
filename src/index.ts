@@ -56,9 +56,15 @@ const setup = async (guilds: Discord.Collection<string, Discord.Guild>) => {
     bckp.guilds[aGuild.name].push(data)
   }
   await save(bckp)
+  console.log(new Date() + ' - Data was collected by discord-game-statistics.')
 }
 
 bot.on('ready', () => {
   console.log('Bot is ready and listening for data.')
+
+  // Gather data on bot login
   setup(bot.guilds)
+
+  // Gather data every 30 minutes
+  const loop = setInterval(() => setup(bot.guilds), 60 * 10 * 1000)
 })
