@@ -1,13 +1,19 @@
 {
   "name": "discord-game-statistics",
   "version": "1.0.0",
-  "description": "",
+  "description": "Gather statistics on games played by people on Discord servers",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
   "scripts": {
-    "start": "cd dist/ && node index.js",
     "build": "rm -rf dist/ && tsc",
-    "start:ts": "cd src/ && ts-node index.ts"
+
+    "start": "cd dist/ && node index.js",
+    "start:server": "cd dist/ && node index.js --no-bot",
+    "start:bot": "cd dist/ && node index.js --no-server",
+
+    "ts": "cd src/ && ts-node index.ts",
+    "ts:server": "cd src/ && ts-node index.js --no-bot",
+    "ts:bot": "cd src/ && ts-node index.js --no-server"
   },
   "repository": {
     "type": "git",

@@ -5,3 +5,4 @@ node_modules
 /dist/config.js
 /dist/config.d.ts
 /data.json
+/dist/

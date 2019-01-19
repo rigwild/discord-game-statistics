@@ -11,6 +11,7 @@ import { discordAuthToken, dataFile, scrapInterval } from './config'
 const botLogin = async (): Promise<Discord.Client> => {
   const bot = new Discord.Client()
   await bot.login(discordAuthToken)
+  if (!bot) throw new Error('Bot : Could not log in.')
   return bot
 }
 
@@ -77,7 +78,7 @@ const botStart = async (): Promise<NodeJS.Timeout> => {
   // Gather data on bot login
   getData(bot)
 
-  // Gather data every 30 minutes
+  // Gather data every x minutes
   const loop = setInterval(() => getData(bot), scrapInterval)
   return loop
 }
