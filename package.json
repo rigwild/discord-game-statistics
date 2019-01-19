@@ -1,0 +1,29 @@
+{
+  "name": "discord-game-statistics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "cd dist/ && node index.js",
+    "build": "rm -rf dist/ && tsc",
+    "start:ts": "cd src/ && ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rigwild/discord-game-statistics.git"
+  },
+  "author": "rigwild",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rigwild/discord-game-statistics/issues"
+  },
+  "homepage": "https://github.com/rigwild/discord-game-statistics#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4",
+    "@types/node": "^10.12.18"
+  }
+}
