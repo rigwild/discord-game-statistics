@@ -21,6 +21,7 @@
   "homepage": "https://github.com/rigwild/discord-game-statistics#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
+    "ejs": "^2.6.1",
     "express": "^4.16.4"
   },
   "devDependencies": {
